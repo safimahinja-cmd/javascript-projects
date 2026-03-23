@@ -1,53 +1,72 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic AJAX Demo</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="main">
-      <h2>AJAX Example</h2>
-      <div class='content'id=content">
-        <input type="button" class="button"value="get content" id="btn_content"onclick="getContent()">
-          </div>
-          <script type="text/javascript">
-        //step 1: set up the XMLHttpRequest object
-        var xhttp = new XMLHttpRequest();
-      //STEP 2:prepare the open ajax request
-        ajax.open('GET','.content.html');
-    //STEP3: define the ajax response callback method
-        xhttp.onreadystatechange = function(){
-          if(ajax.readyState == 4 && this.status == 200){
-            document.getElementById("content").innerHTML = this.responseText;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJAX Assignment | Safi Mahinja</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Safi Mahinja</a>
+    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <h1>AJAX Assignment</h1>
+    <p class="muted">XMLHttpRequest demo — click the button to load content without reloading the page.</p>
+
+    <div class="card">
+      <h2>How it works</h2>
+      <ul>
+        <li>An <strong>XMLHttpRequest</strong> object is created.</li>
+        <li>The request is opened with <code>open()</code> and sent with <code>send()</code>.</li>
+        <li>When <code>readyState</code> reaches 4 and <code>status</code> is 200, the response is displayed.</li>
+        <li>The page updates dynamically — no full reload needed.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <button class="btn primary" id="btn_content" type="button" onclick="getContent()">Get Content</button>
+      <div class="ajax-output" id="content" aria-live="polite">
+        <p class="muted">Content will appear here after you click the button.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Safi Mahinja</p>
+  </footer>
+
+  <script>
+    function getContent() {
+      var xhttp = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4) {
+          if (xhttp.status === 200) {
+            document.getElementById("content").innerHTML = xhttp.responseText;
+          } else if (xhttp.status === 0) {
+            document.getElementById("content").innerHTML =
+              "<p style='color:#dc3545'>Network error: could not reach the server. Try running the page from a local server.</p>";
+          } else {
+            document.getElementById("content").innerHTML =
+              "<p style='color:#dc3545'>Error: could not load content (status " + xhttp.status + ").</p>";
           }
-        };
-
-    //STEP4:= send the ajax request for date 
-        function getcontent() {
-          ajax.send();
-        document.getElementById('btn_content').style.display='none';
+          document.getElementById("btn_content").style.display = "none";
         }
-        </script>
-        </body>
-        </html>
-      <!--content.html-->
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        
-        
-      
-      <body>
-        <p>congratulations, you created your first XMLHttpRequest object (AJAX)to dynamically update this page with new content!.</p>
-      </body>
-    </html>
+      };
 
-    <footer class="container footer">
-      <p>© 2024 safi mahinja</p>
-    </footer>
-
-    <script src="ajax.js"></script>
-  </body>
+      xhttp.open("GET", "content.html");
+      xhttp.send();
+    }
+  </script>
+</body>
+</html>

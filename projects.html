@@ -25,36 +25,46 @@
     <p class="muted">Here are a few projects I’m working on as I learn web development.</p>
 
     <section class="grid" id="projectGrid">
-      <article class="project-card" data-tags="html js">
+      <article class="project-card" data-tags="html css js">
         <h2>Portfolio Website</h2>
         <p>
-          A modern multi-page portfolio that introduces me (About), shows my projects, and includes a contact page.
-          It’s responsive on all devices and uses JavaScript for interactive features like a mobile menu and animations.
+          A responsive multi-page portfolio with Home, About, Projects, and Contact pages.
+          Uses HTML, CSS, and JavaScript for layout and interactivity.
         </p>
         <div class="meta">
           <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
         </div>
+        <div class="card-actions">
+          <a class="btn primary" href="index.html">View Site</a>
+        </div>
       </article>
 
-      <article class="project-card" data-tags="js">
-        <h2>To‑Do List App (Coming Soon)</h2>
+      <article class="project-card" data-tags="js ajax">
+        <h2>AJAX Assignment (XMLHttpRequest)</h2>
         <p>
-          A simple to-do list where users can add tasks, mark them complete, and delete them.
-          Tasks will be saved so they remain after refreshing the page.
+          A page that uses <strong>XMLHttpRequest</strong> to load content asynchronously &mdash;
+          without reloading the page. Demonstrates <code>open()</code>, <code>send()</code>,
+          and <code>onreadystatechange</code>.
         </p>
         <div class="meta">
-          <span class="tag">JavaScript</span><span class="tag">DOM</span><span class="tag">localStorage</span>
+          <span class="tag">JavaScript</span><span class="tag">AJAX</span><span class="tag">XMLHttpRequest</span>
+        </div>
+        <div class="card-actions">
+          <a class="btn primary" href="ajax_basic.html">Open Demo</a>
         </div>
       </article>
 
       <article class="project-card" data-tags="js">
-        <h2>Calculator (Coming Soon)</h2>
+        <h2>Calculator</h2>
         <p>
-          A calculator that supports basic operations (addition, subtraction, multiplication, division) using button input.
-          Focused on clean UI and correct calculation logic.
+          A calculator that supports addition, subtraction, multiplication, and division
+          using button input. Focused on clean UI and correct calculation logic.
         </p>
         <div class="meta">
           <span class="tag">JavaScript</span><span class="tag">Functions</span><span class="tag">Events</span>
+        </div>
+        <div class="card-actions">
+          <a class="btn primary" href="calculator.html">Open Calculator</a>
         </div>
       </article>
     </section>

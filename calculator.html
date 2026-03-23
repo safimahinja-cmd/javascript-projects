@@ -1,32 +1,58 @@
-<h2>Calculator</h2>
-<p>
-  A calculator that supports basic operations (addition, subtraction, multiplication, division) using button input.
-  Focused on clean UI and correct calculation logic.
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator | Safi Mahinja</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Safi Mahinja</a>
+    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<div class="calculator" aria-label="Basic calculator">
-  <input id="calcDisplay" type="text" value="0" readonly aria-label="Calculator display" />
+  <main class="container page">
+    <h1>Calculator</h1>
+    <p class="muted">A basic calculator supporting addition, subtraction, multiplication, and division.</p>
 
-  <button type="button" data-action="clear">C</button>
-  <button type="button" data-action="delete">⌫</button>
-  <button type="button" data-action="operator" data-value="/">÷</button>
-  <button type="button" data-action="operator" data-value="*">×</button>
+    <div class="calculator" aria-label="Basic calculator">
+      <input id="calcDisplay" type="text" value="0" readonly aria-label="Calculator display" />
 
-  <button type="button" data-action="digit" data-value="7">7</button>
-  <button type="button" data-action="digit" data-value="8">8</button>
-  <button type="button" data-action="digit" data-value="9">9</button>
-  <button type="button" data-action="operator" data-value="-">−</button>
+      <button type="button" data-action="clear">C</button>
+      <button type="button" data-action="delete">⌫</button>
+      <button type="button" data-action="operator" data-value="/">÷</button>
+      <button type="button" data-action="operator" data-value="*">×</button>
 
-  <button type="button" data-action="digit" data-value="4">4</button>
-  <button type="button" data-action="digit" data-value="5">5</button>
-  <button type="button" data-action="digit" data-value="6">6</button>
-  <button type="button" data-action="operator" data-value="+">+</button>
+      <button type="button" data-action="digit" data-value="7">7</button>
+      <button type="button" data-action="digit" data-value="8">8</button>
+      <button type="button" data-action="digit" data-value="9">9</button>
+      <button type="button" data-action="operator" data-value="-">−</button>
 
-  <button type="button" data-action="digit" data-value="1">1</button>
-  <button type="button" data-action="digit" data-value="2">2</button>
-  <button type="button" data-action="digit" data-value="3">3</button>
-  <button type="button" data-action="equals">=</button>
+      <button type="button" data-action="digit" data-value="4">4</button>
+      <button type="button" data-action="digit" data-value="5">5</button>
+      <button type="button" data-action="digit" data-value="6">6</button>
+      <button type="button" data-action="operator" data-value="+">+</button>
 
-  <button type="button" data-action="digit" data-value="0" style="grid-column: span 2;">0</button>
-  <button type="button" data-action="decimal">.</button>
-</div>
+      <button type="button" data-action="digit" data-value="1">1</button>
+      <button type="button" data-action="digit" data-value="2">2</button>
+      <button type="button" data-action="digit" data-value="3">3</button>
+      <button type="button" data-action="equals">=</button>
+
+      <button type="button" data-action="digit" data-value="0" class="wide">0</button>
+      <button type="button" data-action="decimal">.</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Safi Mahinja</p>
+  </footer>
+</body>
+</html>

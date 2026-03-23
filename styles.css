@@ -1,17 +1,287 @@
+/* ===== Reset / Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: #0d6efd; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== Header / Nav ===== */
+.site-header {
+  background: #1e293b;
+  color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  color: #f1f5f9;
+  font-weight: 700;
+  font-size: 1.15rem;
+  flex: 1;
+}
+.brand:hover { text-decoration: none; color: #93c5fd; }
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: #cbd5e1;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+.site-nav a:hover { background: #334155; color: #f1f5f9; text-decoration: none; }
+.site-nav a.active { background: #334155; color: #f1f5f9; font-weight: 600; text-decoration: none; }
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid #475569;
+  color: #f1f5f9;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #cbd5e1;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
+.theme-toggle:hover { background: #334155; color: #f1f5f9; }
+
+/* ===== Container ===== */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+main.container.page {
+  flex: 1;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+/* ===== Typography ===== */
+h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.35rem; margin-bottom: 0.4rem; }
+p { margin-bottom: 0.75rem; }
+
+.muted { color: #6c757d; }
+.kicker {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* ===== Hero ===== */
+.hero { margin-bottom: 2.5rem; }
+.hero h1 { font-size: 2.5rem; }
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+}
+.btn:hover { background: #0d6efd; color: #fff; text-decoration: none; }
+.btn.primary { background: #0d6efd; color: #fff; }
+.btn.primary:hover { background: #0b5ed7; border-color: #0b5ed7; }
+.btn.secondary { border-color: #6c757d; color: #6c757d; }
+.btn.secondary:hover { background: #6c757d; color: #fff; border-color: #6c757d; }
+
+/* ===== Card ===== */
+.card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Grid / Project Cards ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-card h2 { font-size: 1.2rem; margin: 0; }
+.project-card p { color: #495057; margin: 0; font-size: 0.95rem; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.tag {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* ===== Chips ===== */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+.chips li {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ===== Lists ===== */
+ul:not(.chips) { padding-left: 1.5rem; }
+li { margin-bottom: 0.35rem; }
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #1e293b;
+  color: #94a3b8;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+}
+.site-footer a { color: #93c5fd; }
+
+/* ===== Calculator ===== */
 .calculator {
-  /* Basic calculator styles */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+  max-width: 320px;
 }
 
-.calculator input {
-  padding: 10px;
-  font-size: 18px;
+.calculator input[type="text"] {
+  grid-column: span 4;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  text-align: right;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: #f8f9fa;
+  color: #212529;
 }
 
 .calculator button {
-  padding: 10px;
-  font-size: 18px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
   cursor: pointer;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: #fff;
+  color: #212529;
+  transition: background 0.15s;
+}
+.calculator button:hover { background: #e9ecef; }
+.calculator button[data-action="equals"] { background: #0d6efd; color: #fff; border-color: #0d6efd; }
+.calculator button[data-action="equals"]:hover { background: #0b5ed7; }
+.calculator button[data-action="clear"] { background: #dc3545; color: #fff; border-color: #dc3545; }
+.calculator button[data-action="clear"]:hover { background: #bb2d3b; }
+.calculator button[data-action="operator"] { background: #f8f9fa; font-weight: 600; }
+.calculator button.wide { grid-column: span 2; }
+
+/* ===== AJAX page ===== */
+.ajax-output {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  min-height: 80px;
+  color: #212529;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .nav-toggle { display: block; }
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0;
+    gap: 0;
+  }
+  .site-nav.open { display: flex; }
+  .site-nav a { width: 100%; padding: 0.6rem 0.75rem; }
+  .theme-toggle { width: 100%; margin-left: 0; }
+
+  .hero h1 { font-size: 1.75rem; }
+  .hero-actions { flex-direction: column; }
+  .btn { width: 100%; text-align: center; }
+  .grid { grid-template-columns: 1fr; }
+  .calculator { max-width: 100%; }
 }
