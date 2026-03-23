@@ -1,0 +1,17 @@
+.calculator {
+  /* Basic calculator styles */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calculator input {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.calculator button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
