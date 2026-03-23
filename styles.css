@@ -1,17 +1,86 @@
+:root{
+  --bg: #0b1220;
+  --surface: #0f1b33;
+  --text: #e6eaf2;
+  --muted: rgba(230,234,242,0.75);
+  --border: rgba(255,255,255,0.10);
+  --accent: #4f7cff; /* blue */
+}
+
+*{ box-sizing: border-box; }
+html,body{ margin:0; padding:0; }
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a{ color: var(--accent); }
+a:hover{ filter: brightness(1.08); }
+
+header, footer{
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+footer{
+  border-top: 1px solid var(--border);
+  border-bottom: 0;
+}
+
+main{
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+nav a{
+  display: inline-block;
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+nav a:hover{
+  background: rgba(255,255,255,0.08);
+}
+
+section{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+button, .btn{
+  background: var(--accent);
+  color: white;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover, .btn:hover{ filter: brightness(1.05); }
+
+input, textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+label{ color: var(--muted); }
+
+/* Keep your calculator layout working */
 .calculator {
-  /* Basic calculator styles */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
-
-.calculator input {
-  padding: 10px;
-  font-size: 18px;
-}
-
-.calculator button {
-  padding: 10px;
-  font-size: 18px;
-  cursor: pointer;
-}
+.calculator input { padding: 10px; font-size: 18px; }
+.calculator button { padding: 10px; font-size: 18px; cursor: pointer; }
