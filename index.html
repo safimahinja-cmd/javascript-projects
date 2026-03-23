@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safi Mahinja | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Your one-stop destination for my projects and skills.</p>
-        </section>
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <div class="project">
-                <h3>Project Title 1</h3>
-                <p>A brief description of project 1.</p>
-            </div>
-            <div class="project">
-                <h3>Project Title 2</h3>
-                <p>A brief description of project 2.</p>
-            </div>
-            <div class="project">
-                <h3>Project Title 3</h3>
-                <p>A brief description of project 3.</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
-    </footer>
+  <header class="site-header">
+    <a class="brand" href="index.html">Safi Mahinja</a>
+    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section class="hero">
+      <p class="kicker">Student Web Developer</p>
+      <h1>Hi, I’m Safi Mahinja.</h1>
+      <p class="muted">
+        I’m learning web development and building projects with HTML, CSS, and JavaScript.
+        Explore my work and follow my progress.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="projects.html">View Projects</a>
+        <a class="btn" href="about.html">About Me</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What you’ll find here</h2>
+      <ul>
+        <li>A modern, multi-page portfolio site</li>
+        <li>Interactive JavaScript features (theme toggle, filters, modal)</li>
+        <li>A growing list of course projects as I complete them</li>
+      </ul>
+    </section>
+
+    <section class="grid" aria-label="Highlights">
+      <article class="project-card">
+        <h2>Responsive Design</h2>
+        <p class="muted">Layouts that work on mobile, tablet, and desktop.</p>
+      </article>
+      <article class="project-card">
+        <h2>JavaScript Interactivity</h2>
+        <p class="muted">Menus, theme toggle, filtering, and modals.</p>
+      </article>
+      <article class="project-card">
+        <h2>Clean UI</h2>
+        <p class="muted">Modern styling with accessible, readable components.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Safi Mahinja</p>
+  </footer>
 </body>
 </html>
