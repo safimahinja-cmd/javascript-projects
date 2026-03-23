@@ -48,6 +48,18 @@ A simple to‑do list app where users can add tasks, mark them as completed, and
 
 ---
 
+## Project 4 — Basic Calculator
+
+**What it does:**  
+A basic calculator that supports addition, subtraction, multiplication, and division using button input.
+
+**Skills / concepts used:**
+- **JavaScript** functions
+- **Event listeners**
+- Updating the DOM (calculator display)
+
+---
+
 ## Live Site (GitHub Pages)
 
 After enabling GitHub Pages in this repo:
