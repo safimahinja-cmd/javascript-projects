@@ -1,0 +1,32 @@
+<h2>Calculator</h2>
+<p>
+  A calculator that supports basic operations (addition, subtraction, multiplication, division) using button input.
+  Focused on clean UI and correct calculation logic.
+</p>
+
+<div class="calculator" aria-label="Basic calculator">
+  <input id="calcDisplay" type="text" value="0" readonly aria-label="Calculator display" />
+
+  <button type="button" data-action="clear">C</button>
+  <button type="button" data-action="delete">⌫</button>
+  <button type="button" data-action="operator" data-value="/">÷</button>
+  <button type="button" data-action="operator" data-value="*">×</button>
+
+  <button type="button" data-action="digit" data-value="7">7</button>
+  <button type="button" data-action="digit" data-value="8">8</button>
+  <button type="button" data-action="digit" data-value="9">9</button>
+  <button type="button" data-action="operator" data-value="-">−</button>
+
+  <button type="button" data-action="digit" data-value="4">4</button>
+  <button type="button" data-action="digit" data-value="5">5</button>
+  <button type="button" data-action="digit" data-value="6">6</button>
+  <button type="button" data-action="operator" data-value="+">+</button>
+
+  <button type="button" data-action="digit" data-value="1">1</button>
+  <button type="button" data-action="digit" data-value="2">2</button>
+  <button type="button" data-action="digit" data-value="3">3</button>
+  <button type="button" data-action="equals">=</button>
+
+  <button type="button" data-action="digit" data-value="0" style="grid-column: span 2;">0</button>
+  <button type="button" data-action="decimal">.</button>
+</div>
