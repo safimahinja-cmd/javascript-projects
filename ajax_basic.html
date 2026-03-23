@@ -1,0 +1,53 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic AJAX Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h2>AJAX Example</h2>
+      <div class='content'id=content">
+        <input type="button" class="button"value="get content" id="btn_content"onclick="getContent()">
+          </div>
+          <script type="text/javascript">
+        //step 1: set up the XMLHttpRequest object
+        var xhttp = new XMLHttpRequest();
+      //STEP 2:prepare the open ajax request
+        ajax.open('GET','.content.html');
+    //STEP3: define the ajax response callback method
+        xhttp.onreadystatechange = function(){
+          if(ajax.readyState == 4 && this.status == 200){
+            document.getElementById("content").innerHTML = this.responseText;
+          }
+        };
+
+    //STEP4:= send the ajax request for date 
+        function getcontent() {
+          ajax.send();
+        document.getElementById('btn_content').style.display='none';
+        }
+        </script>
+        </body>
+        </html>
+      <!--content.html-->
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        
+        
+      
+      <body>
+        <p>congratulations, you created your first XMLHttpRequest object (AJAX)to dynamically update this page with new content!.</p>
+      </body>
+    </html>
+
+    <footer class="container footer">
+      <p>© 2024 safi mahinja</p>
+    </footer>
+
+    <script src="ajax.js"></script>
+  </body>
