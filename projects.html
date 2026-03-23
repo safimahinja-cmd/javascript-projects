@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Safi Mahinja</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Safi Mahinja</a>
+    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <h1>Projects</h1>
+    <p class="muted">Here are a few projects I’m working on as I learn web development.</p>
+
+    <section class="grid" id="projectGrid">
+      <article class="project-card" data-tags="html js">
+        <h2>Portfolio Website</h2>
+        <p>
+          A modern multi-page portfolio that introduces me (About), shows my projects, and includes a contact page.
+          It’s responsive on all devices and uses JavaScript for interactive features like a mobile menu and animations.
+        </p>
+        <div class="meta">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+        </div>
+      </article>
+
+      <article class="project-card" data-tags="js">
+        <h2>To‑Do List App (Coming Soon)</h2>
+        <p>
+          A simple to-do list where users can add tasks, mark them complete, and delete them.
+          Tasks will be saved so they remain after refreshing the page.
+        </p>
+        <div class="meta">
+          <span class="tag">JavaScript</span><span class="tag">DOM</span><span class="tag">localStorage</span>
+        </div>
+      </article>
+
+      <article class="project-card" data-tags="js">
+        <h2>Calculator (Coming Soon)</h2>
+        <p>
+          A calculator that supports basic operations (addition, subtraction, multiplication, division) using button input.
+          Focused on clean UI and correct calculation logic.
+        </p>
+        <div class="meta">
+          <span class="tag">JavaScript</span><span class="tag">Functions</span><span class="tag">Events</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Safi Mahinja</p>
+  </footer>
+</body>
+</html>
